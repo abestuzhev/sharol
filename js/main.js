@@ -102,9 +102,9 @@ $(document).ready(function() {
 //    popup
     $(".btn-question").click(function(event) {
         event.preventDefault();
-        $('.c-popup_question').toggleClass('c-popup_show');
-        $('.c-popup_bg').toggleClass('is-visible');
-        $('body').toggleClass('body-popup');
+        $('.c-popup_question').addClass('c-popup_show');
+        $('.c-popup_bg').addClass('is-visible');
+        $('body').addClass('body-popup');
         // $(this).parent().addClass('animated bounce');
     });
 
@@ -118,4 +118,12 @@ $(document).ready(function() {
         $('.btn-question_box').removeClass('animated bounce');
     });
 
+    // появление через 30 секунд
+    function autoShowPoup (){
+      $('.c-popup_question').addClass('c-popup_show');
+      $('.c-popup_bg').addClass('is-visible');
+      $('body').addClass('body-popup');
+    }
+
+    setTimeout(autoShowPoup, 5000);
 });
