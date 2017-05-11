@@ -100,6 +100,7 @@ $(document).ready(function() {
 
 
 //    popup
+    /*
     $(".btn-question").click(function(event) {
         event.preventDefault();
         $('.c-popup_question').addClass('c-popup_show');
@@ -107,16 +108,28 @@ $(document).ready(function() {
         $('body').addClass('body-popup');
         // $(this).parent().addClass('animated bounce');
     });
+    */
 
+    $(".btn-question").click(function(event) {
+        event.preventDefault();
+        $('.popup-iframe').addClass('c-popup_show');
+        $('.c-popup_close').addClass('c-popup_show');
+        $('body').addClass('body-popup');
+        // $(this).parent().addClass('animated bounce');
+    });
 
     /*закрыть popup*/
     $(".c-popup_close").click(function(event) {
         event.preventDefault();
-        $(this).parent('.c-popup').toggleClass('c-popup_show');
-        $('.c-popup_bg').toggleClass('is-visible');
-        $('body').toggleClass('body-popup');
+        $(this).removeClass('c-popup_show');
+        $(this).parent('.c-popup').removeClass('c-popup_show');
+        $('.c-popup_bg').removeClass('is-visible');
+        $('body').removeClass('body-popup');
         $('.btn-question_box').removeClass('animated bounce');
+        $('.popup-iframe').removeClass('c-popup_show');
+        // setTimeout($('.popup-iframe').removeClass('c-popup_show'), 300);
     });
+
 
     // появление через 30 секунд
     function autoShowPoup (){

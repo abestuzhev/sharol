@@ -630,6 +630,7 @@ pop-up
     -ms-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
     transition: all .2s ease-out;
+    display: block;
 }
 
 .c-popup * {
@@ -643,7 +644,7 @@ pop-up
     background-color: #fff;
     width: 100%;
     height: 100%;
-    opacity: 0;
+    opacity: 1;
     z-index: -1;
     -webkit-transition: opacity .2s ease-out;
     -moz-transition: opacity .2s ease-out;
@@ -655,8 +656,8 @@ pop-up
 
 .c-popup_close {
     position: absolute;
-    right: 26px;
-    top: 15px;
+    right: 52px;
+    top: 40px;
     cursor: pointer;
     z-index: 999999;
     font-size: 44px;
@@ -667,6 +668,21 @@ pop-up
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
+    display: none;
+}
+
+/*iframe*/
+
+.popup-iframe {
+    display: none;
+    border: none;
+    outline: 1px solid #000000;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
 }
 
 
