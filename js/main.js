@@ -24,8 +24,8 @@ function StepsSlider() {
     function ShowStep(index) {
         //РЈРґР°Р»СЏРµРј РІСЃРµ РЅРµ РЅСѓР¶РЅС‹Рµ SHOW
         var a = index - 1;
-        $(steps[a]).addClass('blur').fadeOut(500);
-        $(steps[index]).fadeIn(500).removeClass('blur');
+        $(steps[a]).addClass('blur').fadeOut(0);
+        $(steps[index]).fadeIn(0).removeClass('blur');
 
     }
     var active = 0;
