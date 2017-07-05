@@ -131,12 +131,18 @@ $(document).ready(function() {
     });
 
 
-    // появление через 30 секунд
+    // появление c задержкой
     function autoShowPoup (){
-      $('.c-popup_question').addClass('c-popup_show');
-      $('.c-popup_bg').addClass('is-visible');
-      $('body').addClass('body-popup');
+
+        if($('.popup-iframe').hasClass("c-popup_show")){
+            return false;
+        }else{
+            $('.popup-iframe').addClass('c-popup_show');
+            $('.c-popup_close').addClass('c-popup_show');
+            $('.c-popup_bg').addClass('is-visible');
+            $('body').addClass('body-popup');
+        }
     }
 
-    setTimeout(autoShowPoup, 5000);
+    setTimeout(autoShowPoup, 360000);
 });
